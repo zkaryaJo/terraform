@@ -1,3 +1,15 @@
+## Force replacement of resources.
+#step 1. terraform init, apply
+#step 2. terraform state list
+#step 3. terraform taint "Step 2's resource"
+#step 4-1. terraform apply
+#step 4-2. terraform untaint "Step 2's reource"
+#####
+
+## Force replace a single resource.
+# terraform apply -replace="Step 2's resource"
+#####
+
 provider "aws" {
   region = "ap-northeast-2"
 }
